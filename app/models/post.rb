@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   validate :ClickBaitTitle
 
   def ClickBaitTitle
-    # /\bWon't Believe|\bSecret|\bTop \d+|\bGuess/.match(self.title)
-    true
+    if !/\bWon't Believe|\bSecret|\bTop \d+|\bGuess/.match(self.title)
+      errors.add(:title, "is not click baitey")
   end
 end
