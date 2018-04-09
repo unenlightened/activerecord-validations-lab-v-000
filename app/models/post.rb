@@ -7,6 +7,6 @@ class Post < ActiveRecord::Base
 
   def ClickBaitTitle
     # /\bWon't Believe|\bSecret|\bTop \d+|\bGuess/.match(self.title)
-    false
+    true
   end
 end
