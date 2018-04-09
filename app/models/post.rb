@@ -8,5 +8,6 @@ class Post < ActiveRecord::Base
   def ClickBaitTitle
     if !/\bWon't Believe|\bSecret|\bTop \d+|\bGuess/.match(self.title)
       errors.add(:title, "is not click baitey")
+    end
   end
 end
